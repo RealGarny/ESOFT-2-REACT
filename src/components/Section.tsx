@@ -1,4 +1,5 @@
 import { ContainerProps } from "../interfaces"
+import Container from "./Container"
 import Text from "./Text"
 
 interface SectionProps extends ContainerProps {
