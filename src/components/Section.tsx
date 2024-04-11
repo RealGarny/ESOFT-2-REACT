@@ -1,8 +1,15 @@
 import { ContainerProps } from "../interfaces"
+import Container from "./Container"
+import Text from "./Text"
 
-const Section = (props:ContainerProps) => {
+interface SectionProps extends ContainerProps {
+    header:string
+}
+
+const Section = (props:SectionProps) => {
     return(
-        <div className={`flex flex-col gap-2 ${props.className}`}>
+        <div className="flex-col first:mt-0 mt-6">
+            <Text text={props.header} type="md" className="font-bold"/>
             {props.children}
         </div>
     )
