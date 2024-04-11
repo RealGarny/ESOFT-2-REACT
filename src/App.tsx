@@ -4,6 +4,7 @@ import cardSections from "./data"
 
 import { cardItem, sectionItem } from "./interfaces"
 import Card from "./components/Card"
+import Text from "./components/Text"
 
 
 function App() {
@@ -21,8 +22,8 @@ function App() {
             </div>
             <div className="flex flex-col justify-center z-10">
               <p className="text-2xl font-semibold"><span className="text-primary">Асеев</span> Никита Михайлович</p>
-              <p>Маленький программист-самоучка</p>
-              <p>2 годика</p>
+              <Text text="Маленький программист-самоучка" />
+              <Text text="2 годика" className="opacity-50"/>
             </div>
             <div className="absolute h-2/3 w-1/3 blur-3xl rounded-full bg-secondary bottom-[-20px] right-[-12px] z-0"></div>
           </div>
@@ -48,6 +49,9 @@ function App() {
               </Section>
             )
           })}
+      </Container>
+      <Container className="bg-primary text-background justify-center">
+        <Text text="Хорошего вам дня!" scale="md" className="font-bold"/>
       </Container>
     </>
   )

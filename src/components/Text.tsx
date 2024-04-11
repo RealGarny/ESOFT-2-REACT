@@ -3,11 +3,11 @@ interface TextProps {
     type?: string,
     text: string,
     url?: string,
-    scale: string,
+    scale?: string,
     className?:string
 }
 
-const Text = ({type="text", text, url, scale, className}:TextProps) => {
+const Text = ({type="text", text, url, scale="sm", className}:TextProps) => {
     let fontStyle:string = "";
 
     switch(scale) {
@@ -18,9 +18,6 @@ const Text = ({type="text", text, url, scale, className}:TextProps) => {
             fontStyle = "md:text-3xl text-2xl"
             break;
         case "sm":
-            fontStyle = "md:text-sm text-xs"
-            break;
-        default:
             fontStyle = "md:text-sm text-xs"
             break;
     }
