@@ -28,18 +28,21 @@ const cardSections:sectionItem[] = [
         header: "Мои проекты",
         items: [{
             iconPath: "",
+            url: "https://github.com/RealGarny/react-minesweeper",
             title: "Blocky",
             description: "Сапер, сделанный на React"
         },
         {
             iconPath: "",
+            url: "https://github.com/RealGarny/chronos_discord_bot",
             title: "Chronos",
             description: "Музыкальный Discord бот, проигрывающий видео с Youtube"
         },
         {
             iconPath: "",
-            title: "C++",
-            description: "Дебаг консоль, замаскированная под язык"
+            url: "#",
+            title: "И так далее",
+            description: "Проектов у меня много, но они все разной степени поршивости ;("
         }]
     },
     {

@@ -9,7 +9,6 @@ import Card from "./components/Card"
 function App() {
 
   {/*Как видно ниже, я не ищу легких путей...*/}
-  //text-3xl lg:text-5xl
   return (
     <>
       <Container className="flex-col max-w-4xl mx-auto text-text">
@@ -38,6 +37,7 @@ function App() {
                     return(
                     <Card
                       title={card.title}
+                      url={card.url && card.url}
                       key={j}
                       iconPath={card.iconPath}
                       description={card.description}

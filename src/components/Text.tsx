@@ -2,13 +2,15 @@
 interface TextProps {
     type?: string,
     text: string,
+    url?: string,
+    scale: string,
     className?:string
 }
 
-const Text = (props:TextProps) => {
+const Text = ({type="text", text, url, scale, className}:TextProps) => {
     let fontStyle:string = "";
 
-    switch(props.type) {
+    switch(scale) {
         case "lg": 
             fontStyle = "md:text-5xl text-3xl"
             break;
@@ -22,9 +24,11 @@ const Text = (props:TextProps) => {
             fontStyle = "md:text-sm text-xs"
             break;
     }
-
+    console.log(type)
     return(
-        <p className={`${fontStyle} ${props.className ? props.className : ""}`}>{props.text}</p>
+        type === "link" 
+        ? <a href={url} className={`${fontStyle} ${className ? className : ""}`}>{text}</a>
+        : <p className={`${fontStyle} ${className ? className : ""}`}>{text}</p>
     )
 }
 
