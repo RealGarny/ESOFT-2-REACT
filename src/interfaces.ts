@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-export interface ContainerProps{
-    children: React.ReactNode,
-    className?: string
-=======
 import React from "react"
 
 export interface ContainerProps {
@@ -19,5 +14,4 @@ export interface cardItem {
 export interface sectionItem {
   header: string,
   items:cardItem[]
->>>>>>> be5cae7a729dc768c13bf41a15939bd9278787a2
 }
